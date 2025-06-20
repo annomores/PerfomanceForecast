@@ -1,0 +1,193 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- Заголовок -->
+        <TextView
+            android:id="@+id/textTitle"
+            android:text="Статистика"
+            android:textSize="32sp"
+            android:fontFamily="serif"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- Кнопки-предметы -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginBottom="16dp">
+
+            <Button
+                android:id="@+id/btnOOP"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="48dp"
+                android:text="ООП"
+                android:textSize="18sp"
+                android:fontFamily="serif"
+                android:background="@drawable/subject_btn_selected"
+                android:textColor="#226B4B"
+                android:layout_marginEnd="8dp"/>
+
+            <Button
+                android:id="@+id/btnMath"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="48dp"
+                android:text="Мат. анализ"
+                android:textSize="18sp"
+                android:fontFamily="serif"
+                android:background="@drawable/subject_btn_unselected"
+                android:textColor="#226B4B"
+                android:layout_marginEnd="8dp"/>
+
+            <Button
+                android:id="@+id/btnDiff"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="48dp"
+                android:text="Дифф. уравнения"
+                android:textSize="18sp"
+                android:fontFamily="serif"
+                android:background="@drawable/subject_btn_unselected"
+                android:textColor="#226B4B"/>
+        </LinearLayout>
+
+        <!-- Прогноз по предмету -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/box_bg"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:id="@+id/textForecastTitle"
+                android:text="Прогноз по предмету - 3 семестр"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:fontFamily="serif"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"/>
+
+            <TextView
+                android:id="@+id/textForecast"
+                android:text="Вы успешно сдадите сессию"
+                android:textSize="18sp"
+                android:textColor="#178B4B"
+                android:fontFamily="serif"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <!-- Учебная успеваемость -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/box_bg"
+            android:padding="16dp">
+
+            <TextView
+                android:text="Учебная успеваемость"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:fontFamily="serif"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/grade_bg"
+                    android:padding="12dp"
+                    android:layout_marginEnd="12dp"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/textGrade"
+                        android:text="3.9"
+                        android:textSize="28sp"
+                        android:textColor="#178B4B"
+                        android:textStyle="bold"
+                        android:fontFamily="serif"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:text="Текущий\nбалл"
+                        android:textSize="16sp"
+                        android:gravity="center"
+                        android:fontFamily="serif"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/missed_bg"
+                    android:padding="12dp"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/textMissed"
+                        android:text="5"
+                        android:textSize="28sp"
+                        android:textColor="#B22222"
+                        android:textStyle="bold"
+                        android:fontFamily="serif"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:text="Пропущено\nлекций"
+                        android:textSize="16sp"
+                        android:gravity="center"
+                        android:fontFamily="serif"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- ... ваш основной контент ... -->
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNavigationView"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_gravity="bottom"
+            app:menu="@menu/bottom_nav_menu"
+            app:itemIconTint="@color/black"
+            app:labelVisibilityMode="unlabeled"
+            android:background="@android:color/white"/>
+    </LinearLayout>
+</ScrollView>

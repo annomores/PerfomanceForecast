@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:orientation="vertical"
+android:gravity="center"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="@android:color/white"
+android:padding="24dp">
+
+<com.example.study.ui.IconView
+    android:id="@+id/imageLogo"
+    android:layout_width="160dp"
+    android:layout_height="160dp"
+    android:layout_marginBottom="24dp" />
+
+<!-- Заголовок -->
+<TextView
+    android:id="@+id/textTitle"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Вход"
+    android:textSize="40sp"
+    android:textStyle="normal"
+    android:fontFamily="serif"
+    android:layout_marginBottom="32dp"
+    android:textColor="#000000"/>
+
+<!-- Поле логина -->
+<EditText
+    android:id="@+id/editLogin"
+    android:layout_width="match_parent"
+    android:layout_height="56dp"
+    android:hint="Логин"
+    android:background="@drawable/rounded_edittext_bg"
+    android:padding="16dp"
+    android:textSize="18sp"
+    android:layout_marginBottom="16dp"/>
+
+<!-- Поле пароля -->
+<EditText
+    android:id="@+id/editPassword"
+    android:layout_width="match_parent"
+    android:layout_height="56dp"
+    android:hint="Пароль"
+    android:background="@drawable/rounded_edittext_bg"
+    android:padding="16dp"
+    android:textSize="18sp"
+    android:inputType="textPassword"
+    android:layout_marginBottom="32dp"/>
+
+<!-- Кнопка входа -->
+<Button
+    android:id="@+id/buttonLogin"
+    android:layout_width="match_parent"
+    android:layout_height="56dp"
+    android:text="Войти"
+    android:textSize="22sp"
+    android:textColor="#222222"
+    android:background="@drawable/rounded_button_bg"
+    android:fontFamily="serif"/>
+</LinearLayout>
+</PreferenceScreen>
