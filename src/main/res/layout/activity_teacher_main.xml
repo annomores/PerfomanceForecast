@@ -1,0 +1,133 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <!-- Заголовок -->
+            <TextView
+                android:text="Прогноз результатов"
+                android:textSize="28sp"
+                android:fontFamily="serif"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"/>
+
+            <!-- Кнопки-предметы -->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginBottom="12dp">
+
+                <Button
+                    android:id="@+id/btnOOP"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="48dp"
+                    android:text="ООП"
+                    android:textSize="16sp"
+                    android:fontFamily="serif"
+                    android:background="@drawable/subject_btn_selected"
+                    android:textColor="#226B4B"
+                    android:layout_marginEnd="8dp"/>
+
+                <Button
+                    android:id="@+id/btnMath"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="48dp"
+                    android:text="Мат. анализ"
+                    android:textSize="16sp"
+                    android:fontFamily="serif"
+                    android:background="@drawable/subject_btn_unselected"
+                    android:textColor="#226B4B"
+                    android:layout_marginEnd="8dp"/>
+
+                <Button
+                    android:id="@+id/btnDiff"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="48dp"
+                    android:text="Дифф. уравнения"
+                    android:textSize="16sp"
+                    android:fontFamily="serif"
+                    android:background="@drawable/subject_btn_unselected"
+                    android:textColor="#226B4B"/>
+            </LinearLayout>
+
+            <!-- Группа -->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:text="Группа: "
+                    android:textSize="20sp"
+                    android:fontFamily="serif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <Spinner
+                    android:id="@+id/spinnerGroups"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:spinnerMode="dropdown"/>
+
+            </LinearLayout>
+
+            <!-- Таблица студентов -->
+            <TableLayout
+                android:id="@+id/tableStudents"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="*"
+                android:background="@android:color/white">
+
+                <!-- Заголовки -->
+                <TableRow>
+                    <TextView
+                        android:text="ФИО"
+                        android:textStyle="bold"
+                        android:fontFamily="serif"
+                        android:padding="8dp"/>
+                    <TextView
+                        android:text="Прогноз"
+                        android:textStyle="bold"
+                        android:fontFamily="serif"
+                        android:padding="8dp"/>
+                </TableRow>
+                <!-- Данные будут добавляться программно -->
+            </TableLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Нижнее меню -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationTeacher"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_gravity="bottom"
+        app:menu="@menu/bottom_nav_teacher"
+        app:itemIconTint="@color/black"
+        app:labelVisibilityMode="unlabeled"
+        android:background="@android:color/white"/>
+</LinearLayout>
